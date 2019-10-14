@@ -13,12 +13,18 @@ textarea{
   padding: 10px;
 }
 
+#jdi {
+  height: 10%;
+  width: 7.5%;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  padding-bottom: 0%;
 }
 
 .description{
@@ -33,7 +39,11 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin: 2%;
 }
 
 .hour {
@@ -62,7 +72,13 @@ textarea{
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
+  height: 100%;
   color: white;
+  margin-left: 2%;
+}
+
+.wBtn {
+  margin-left: 2%;
 }
 
 .saveBtn i:hover {
