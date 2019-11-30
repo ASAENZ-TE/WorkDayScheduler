@@ -26,23 +26,23 @@ $(document).ready(function () {
 });
 
 for (i = 0; i < 10; i++) {
-    var rowBlock = $('<div>').addClass('row')
+    var rowV = $('<div>').addClass('row')
     var timeBlock = $('<div>').addClass('hour').text(moment('8:00 AM', 'hh:mm A').add(i, 'hours').format('hA')).css('width', '10%')
     timeBlock.attr('data-time', moment('8:00 AM', 'hh:mm A').add(i, 'hours').format('hA'))
-    var taskBlock = $('<textarea>').css('width', '80%')
+    var toDo = $('<textarea>').css('width', '80%')
     var saveBtn = $('<button>').addClass('saveBtn').html('<i class="fas fa-save"></i>')
 
-    $('.container').append(rowBlock)
-    $(rowBlock).append(timeBlock)
-    $(timeBlock).after(taskBlock)
-    $(taskBlock).after(saveBtn)
+    $('.container').append(rowV)
+    $(rowV).append(timeBlock)
+    $(timeBlock).after(toDo)
+    $(toDo).after(saveBtn)
 
     if (rn.isSame(moment('8:00 AM', 'hh:mm A').add(i, 'hours'), 'hour')) {
-        $(taskBlock).addClass('present')
+        $(toDo).addClass('present')
     } else if (rn.isBefore(moment('8:00 AM', 'hh:mm A').add(i, 'hours'), 'hour')) {
-        $(taskBlock).addClass('future')
+        $(toDo).addClass('future')
     } else if (rn.isAfter(moment('8:00 AM', 'hh:mm A').add(i, 'hours'), 'hour')) {
-        $(taskBlock).addClass('past')
+        $(toDo).addClass('past')
     }
 }
 // test! is this working?
